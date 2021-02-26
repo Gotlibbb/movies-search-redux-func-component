@@ -7,7 +7,7 @@ type InitialStateType = {
     currentPage: number
     totalResults: string
     searchResults: FilmPreviewType[]
-    error: string
+    error: string | null
 }
 
 let initialState: InitialStateType = {
@@ -41,7 +41,6 @@ export const searchResultsReducer = (state: InitialStateType = initialState, act
         }
 
         case "SET_CURRENT_PAGE": {
-            debugger
             return {...state, currentPage: action.currentPage}
         }
 
@@ -101,7 +100,7 @@ export const setSearchResults = (searchResults: FilmPreviewType[]) => {
     } as const
 }
 
-export const setError = (error: string) => {
+export const setError = (error: string | null) => {
     return {
         type: "SET_ERROR",
         error
@@ -121,6 +120,7 @@ export const getSearchResults = (film: string, page: number = 1) => {
 
             }
             if (!res.Error) {
+                dispatch(setError(null))
                 dispatch(setFilmName(film))
                 dispatch(setPreloader(false))
                 dispatch(setTotalResults(res.totalResults))

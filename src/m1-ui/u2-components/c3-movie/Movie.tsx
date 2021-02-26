@@ -1,8 +1,16 @@
 import style from "../../u3-css/App.module.css";
 import React from "react";
 import {MovieType} from "../../../m2-bll/b1-reducers/r2-movieReducer";
+import {Preloader} from "../../u5-assets/Preloader";
 
 const Movie = (props: MoviePropsType) => {
+
+    if (props.preloader) return <Preloader/>
+
+    if (!props.movie) return <Preloader/>
+
+    if (!props.movie.Title) return <Preloader/>
+
 
 
     return <div className={style.moviePage}>
@@ -32,7 +40,9 @@ const Movie = (props: MoviePropsType) => {
 
 type MoviePropsType = {
 
-    movie: MovieType
+    preloader: boolean
+
+    movie: MovieType | null
 
     backToSearchHandler: () => void
 }

@@ -1,6 +1,7 @@
 import {Dispatch} from "redux";
 import {api} from "../../m3-dall/api";
 import {AxiosResponse} from "axios";
+import {DispatchActionTypeResults, setPreloader} from "./r1-searchResultsReducer";
 
 
 let initialState: InitialStateType = {
@@ -40,7 +41,7 @@ export const movieReducer = (state: InitialStateType = initialState, action: Dis
 
 }
 
-export const setMovie = (movie: MovieType) => {
+export const setMovie = (movie: MovieType | null) => {
     return {
         type: "SET_MOVIE",
         movie
@@ -49,15 +50,17 @@ export const setMovie = (movie: MovieType) => {
 
 
 export const getMovie = (filmId: string) => {
-    return (dispatch: Dispatch<DispatchActionTypeMovie>) => {
+    return (dispatch: Dispatch<DispatchActionTypeMovie | DispatchActionTypeResults>) => {
+        dispatch(setPreloader(true))
         api.getFilmByImdbId(filmId).then((res: AxiosResponse<MovieType>) => {
             dispatch(setMovie(res.data))
+            dispatch(setPreloader(false))
         })
     }
 }
 
 type InitialStateType = {
-    movie: MovieType
+    movie: MovieType | null
 }
 
 export type MovieType = {

@@ -38,6 +38,7 @@ const Results = (props: ResultsPropsType) => {
                                 Year: el.Year,
                             }
                             return <FilmPreview
+                                key={el.imdbID}
                                 filmPreview={obj}
                                 viewFilmHandler={props.viewFilmHandler}
                             />
@@ -63,7 +64,7 @@ type ResultsPropsType = {
     viewFilmHandler: (imdbID: string) => void
     searchResults: FilmPreviewType[]
 
-    error: string
+    error: string | null
     totalResults: string
     currentPage: number
     setCurrentPage: (currentPage: number) => void

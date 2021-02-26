@@ -5,11 +5,11 @@ import MovieContainer from "../u2-components/c3-movie/MovieContainer";
 
 export function Routes() {
     return<Switch>
-        <Route path={'/movies-search-useState/search-results/:filmNameUrl/:page'}>
+        <Route path={'/movies-search-redux-func/search-results/:filmNameUrl/:page'}>
             <ResultsContainer/>
         </Route>
 
-        <Route path={'/movies-search-useState/movie/:filmNameUrl/:movieId'}>
+        <Route path={'/movies-search-redux-func/movie/:filmNameUrl/:movieId'}>
             <MovieContainer/>
         </Route>
     </Switch>

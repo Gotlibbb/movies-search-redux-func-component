@@ -17,7 +17,7 @@ const Pagination = (props: PaginationPropsType) => {
     }
 
     const pushUrl = (page: string) => {
-        history.push(`/movies-search-useState/search-results/` + props.filmName + `/` + page)
+        history.push(`/movies-search-redux-func/search-results/` + props.filmName + `/` + page)
     }
 
 
