@@ -14,10 +14,6 @@ const Results = (props: ResultsPropsType) => {
 
     return <div className={style.resultsContainer}>
 
-
-        <div className={style.resultsBlock}>
-
-
             <Pagination
                 totalResults={props.totalResults}
                 currentPage={props.currentPage}
@@ -26,7 +22,6 @@ const Results = (props: ResultsPropsType) => {
 
 
             />
-
             {props.preloader ? <Preloader/> :
                 <div className={style.resultsBlock}>
                     {props.searchResults.map((el) => {
@@ -55,7 +50,6 @@ const Results = (props: ResultsPropsType) => {
                 filmName={props.filmName}
             />
 
-        </div>
     </div>
 }
 

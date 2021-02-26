@@ -29,13 +29,13 @@ const Pagination = (props: PaginationPropsType) => {
 
         return <div
             className={style.toggleBlock}
-            style={props.onlySwitch ? {justifyContent: "center", paddingLeft: "75px"} : {}}
+            style={props.onlySwitch ? {justifyContent: "center"} : {}}
         >
             <div
                 className={style.changePage}
                 hidden={props.onlySwitch}
             >
-                <div hidden={props.onlySwitch}>Change page:</div>
+                <div hidden={props.onlySwitch} >Change page:</div>
                 <input hidden={props.onlySwitch} type="number" value={inputPage}
                        onChange={(e) => {
                            setInputPage(e.currentTarget.value)

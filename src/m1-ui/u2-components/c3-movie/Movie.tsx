@@ -12,15 +12,17 @@ const Movie = (props: MoviePropsType) => {
     if (!props.movie.Title) return <Preloader/>
 
 
-
     return <div className={style.moviePage}>
 
         <span onClick={props.backToSearchHandler}>⇦ Back to search</span>
-
+        <div className={style.Title}>{props.movie.Title}</div>
         <div className={style.movieContainer}>
+
             <img src={props.movie.Poster} alt={"poster"}/>
+
             <div className={style.movieInfo}>
-                <div className={style.Title}>{props.movie.Title}</div>
+
+
                 <div><u><b>Production</b></u>: {props.movie.Production}</div>
                 <div><u><b>Type</b></u>: {props.movie.Type}</div>
                 <div><u><b>Genre</b></u>: {props.movie.Genre}</div>
@@ -33,6 +35,7 @@ const Movie = (props: MoviePropsType) => {
                 <div><u><b>Brief description</b></u>: {props.movie.Plot}</div>
                 <div><u><b>Box office</b></u>: {props.movie.BoxOffice}</div>
                 <div><u><b>Runtime</b></u>: {props.movie.Runtime}</div>
+
             </div>
         </div>
 
