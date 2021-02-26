@@ -1,5 +1,5 @@
 import React from "react"
-import style from "../../u3-css/App.module.css"
+import style from "../../u3-css/c3-Results.module.css"
 import {Preloader} from "../../u5-assets/Preloader";
 import {FilmPreviewType} from "../../../m2-bll/b1-reducers/r1-searchResultsReducer";
 import Pagination from "./Pagination";
@@ -12,10 +12,10 @@ const Results = (props: ResultsPropsType) => {
         return <span style={{color: "red"}}>{props.error}</span>
     }
 
-    return <div className={style.searchingBlock}>
+    return <div className={style.resultsContainer}>
 
 
-        <div className={style.searchResult}>
+        <div className={style.resultsBlock}>
 
 
             <Pagination
@@ -28,7 +28,7 @@ const Results = (props: ResultsPropsType) => {
             />
 
             {props.preloader ? <Preloader/> :
-                <div className={style.searchResult}>
+                <div className={style.resultsBlock}>
                     {props.searchResults.map((el) => {
                             let obj: FilmPreviewType = {
                                 imdbID: el.imdbID,

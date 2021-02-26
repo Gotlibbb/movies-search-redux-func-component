@@ -1,0 +1,76 @@
+
+.pagesBlock{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: flex-start;
+
+}
+.pagesBlock span:hover{
+    color: #d25555;
+    font-weight: bold;
+}
+.pagesBlock span{
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.pagesBlock .checked{
+    color: #d25555;
+    font-weight: bold;
+    font-size: 31px;
+}
+.pageSwitch{
+    display: flex;
+    flex-direction: row;
+}
+
+.toggleBlock{
+    padding: 50px 25px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+
+
+.toggleBlock input{
+    width: 60px;
+}
+
+.pageToggle button{
+    height: 100%;
+    font-size: 25px;
+}
+.pageToggle{
+    display: flex;
+    flex-direction: row;
+    padding-right: 80px;
+}
+
+.currentPage{
+    padding: 0 10px 0 10px;
+    font-size: 40px;
+    color: #d25555;
+}
+
+.totalPage{
+    padding-right: 25px;
+}
+
+.changePage div{
+    padding-right: 10px;
+}
+.changePage{
+
+    display: flex;
+    padding-left: 25px;
+}
+.changePage button{
+    font-size: 25px;
+}

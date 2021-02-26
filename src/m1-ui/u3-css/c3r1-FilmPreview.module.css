@@ -1,0 +1,31 @@
+
+.filmPreview:hover {
+    background-color: #333333;
+
+}
+.filmPreview:active {
+    color: black;
+}
+
+
+
+.filmPreview {
+    padding-bottom: 25px;
+    border-top: solid 5px #7780a0;
+    width: 350px;
+
+}
+
+
+.filmPreview img {
+    width: 100%;
+    padding-top: 5px;
+
+}
+
+.Title {
+    color: #d25555;
+    font-size:35px;
+    padding: 15px 15px;
+    font-weight: bold;
+}

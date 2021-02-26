@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../u3-css/App.module.css'
+import style from '../../u3-css/c3r1-FilmPreview.module.css'
 import {FilmPreviewType} from "../../../m2-bll/b1-reducers/r1-searchResultsReducer";
 
 

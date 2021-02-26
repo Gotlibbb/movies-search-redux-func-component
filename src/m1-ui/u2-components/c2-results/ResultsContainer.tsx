@@ -13,16 +13,15 @@ import {setMovie} from "../../../m2-bll/b1-reducers/r2-movieReducer";
 
 
 const ResultsContainer = () => {
-    let url: { filmNameUrl: string, page: string } = useParams()
-
+    const  url: { filmNameUrl: string, page: string } = useParams()
     const dispatch = useDispatch();
-
     useEffect(() => {
         dispatch(setMovie(null))
         dispatch(setCurrentPage(Number(url.page)))
         dispatch(setFilmName(url.filmNameUrl))
         dispatch(getSearchResults(url.filmNameUrl, Number(url.page)))
     }, [url.page, url.filmNameUrl, dispatch])
+
     const history = useHistory()
     const filmName = useSelector<AppRootStateType, string>(state => state.searchResults.filmName)
     const preloader = useSelector<AppRootStateType, boolean>(state => state.searchResults.preloader)

@@ -1,0 +1,55 @@
+
+.movieContainer .Title {
+    font-size:50px;
+    padding-bottom: 100px;
+}
+.movieContainer {
+
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+
+
+    font-size: 30px;
+    /*border: solid 1px white;*/
+}
+
+.movieContainer img {
+    width: 100%;
+
+    min-width: 400px;
+    max-width: 500px;
+
+}
+
+.movieInfo{
+    padding-left:25px;
+    min-width: 850px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+
+}
+
+.moviePage{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    padding-left: 35px;
+}
+
+
+.moviePage span {
+    text-decoration: none;
+    color: #d25555;
+    font-size: 35px;
+    width: 270px;
+}
+
+.moviePage a:hover{
+    color: white;
+}
+.moviePage a:active {
+    color: black;
+}

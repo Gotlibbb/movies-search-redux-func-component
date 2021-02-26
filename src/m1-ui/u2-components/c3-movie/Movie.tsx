@@ -1,4 +1,4 @@
-import style from "../../u3-css/App.module.css";
+import style from "../../u3-css/c4-Movie.module.css";
 import React from "react";
 import {MovieType} from "../../../m2-bll/b1-reducers/r2-movieReducer";
 import {Preloader} from "../../u5-assets/Preloader";
@@ -14,7 +14,9 @@ const Movie = (props: MoviePropsType) => {
 
 
     return <div className={style.moviePage}>
+
         <span onClick={props.backToSearchHandler}>⇦ Back to search</span>
+
         <div className={style.movieContainer}>
             <img src={props.movie.Poster} alt={"poster"}/>
             <div className={style.movieInfo}>
@@ -33,6 +35,7 @@ const Movie = (props: MoviePropsType) => {
                 <div><u><b>Runtime</b></u>: {props.movie.Runtime}</div>
             </div>
         </div>
+
     </div>
 
 }

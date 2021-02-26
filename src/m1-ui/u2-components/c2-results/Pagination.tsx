@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import style from "../../u3-css/App.module.css";
+import style from "../../u3-css/c3r2-Pagination.module.css";
 import {useHistory} from "react-router-dom";
 
 

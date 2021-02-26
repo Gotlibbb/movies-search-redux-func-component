@@ -9,10 +9,10 @@ const SearchContainer = () => {
     const searchHandler = useCallback((value: string) => {
 
         history.push(`/movies-search-redux-func/search-results/` + value + `/` + 1)
-    },[history])
+    }, [history])
 
     return <Search
-        searchHandler={searchHandler}
+                searchHandler={searchHandler}
     />
 }
 
