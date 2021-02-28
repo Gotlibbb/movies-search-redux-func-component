@@ -35,28 +35,33 @@
     }
 
     .Title {
+
         font-size: 50px;
         text-align: center;
     }
 
-    .moviePage span {
+    .moviePage a {
         color: #d25555;
         font-size: 35px;
         width: 270px;
+        text-decoration: none;
     }
 }
 
 @media screen and (max-width: 700px) {
 
     .movieContainer img {
+
         width: 100%;
+        padding-bottom: 15px;
+
     }
 
     .movieInfo {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: normal;
+        font-size: 20px;
 
     }
 
@@ -64,6 +69,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+
     }
 
     .movieContainer {
@@ -71,20 +77,24 @@
         padding-top: 40px;
         display: flex;
         flex-direction: column;
+        align-items: center;
 
 
         font-size: 30px;
     }
 
     .Title {
-        font-size: 35px;
+        font-weight: bold;
+        padding-top: 15px;
+        font-size: 30px;
         text-align: center;
     }
 
-    .moviePage span {
+    .moviePage a {
         margin-top: 25px;
         color: #d25555;
         font-size: 20px;
+        text-decoration: none;
     }
 }
 
@@ -101,13 +111,13 @@
         display: flex;
         flex-direction: column;
         align-items: normal;
+        font-size: 20px;
 
     }
 
     .moviePage {
         display: flex;
         flex-direction: column;
-        /*align-items: center;*/
         width: 100%;
     }
 
@@ -122,23 +132,24 @@
     }
 
     .Title {
+        padding-top: 15px;
         font-size: 35px;
         text-align: center;
     }
 
-    .moviePage span {
+    .moviePage a {
         margin-top: 25px;
         color: #d25555;
         font-size: 20px;
-
+        text-decoration: none;
     }
 }
 
-.moviePage span:hover {
+.moviePage a:hover {
     color: white;
     cursor: pointer;
 }
 
-.moviePage span:active {
+.moviePage a:active {
     color: black;
 }
