@@ -40,7 +40,7 @@
         text-align: center;
     }
 
-    .moviePage a {
+    .moviePage span {
         color: #d25555;
         font-size: 35px;
         width: 270px;
@@ -90,7 +90,7 @@
         text-align: center;
     }
 
-    .moviePage a {
+    .moviePage span {
         margin-top: 25px;
         color: #d25555;
         font-size: 20px;
@@ -137,7 +137,7 @@
         text-align: center;
     }
 
-    .moviePage a {
+    .moviePage span {
         margin-top: 25px;
         color: #d25555;
         font-size: 20px;
@@ -145,11 +145,11 @@
     }
 }
 
-.moviePage a:hover {
+.moviePage span:hover {
     color: white;
     cursor: pointer;
 }
 
-.moviePage a:active {
+.moviePage span:active {
     color: black;
 }
