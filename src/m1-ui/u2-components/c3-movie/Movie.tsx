@@ -12,15 +12,17 @@ const Movie = (props: MoviePropsType) => {
     if (!props.movie.Title) return <Preloader/>
 
 
-    return <div className={style.moviePage}>
+    return <div className={style.moviePageContainer}>
 
-        <span onClick={props.backToSearchHandler}>⇦ Back to search</span>
-        <div className={style.Title}>{props.movie.Title}</div>
-        <div className={style.movieContainer}>
+        <span className={style.moviePageContainer__backToSearch} onClick={props.backToSearchHandler}>⇦ Back to search</span>
 
-            <img src={props.movie.Poster} alt={"poster"}/>
+        <div className={style.moviePageContainer__title}>{props.movie.Title}</div>
 
-            <div className={style.movieInfo}>
+        <div className={style.moviePageContainer__movieBlock}>
+
+            <img className={style.moviePageContainer__movieBlock__img} src={props.movie.Poster} alt={"poster"}/>
+
+            <div className={style.moviePageContainer__movieBlock__movieInfo}>
 
 
                 <div><u><b>Production</b></u>: {props.movie.Production}</div>

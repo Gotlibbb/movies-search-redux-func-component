@@ -6,18 +6,22 @@ import {FilmPreviewType} from "../../../m2-bll/b1-reducers/r1-searchResultsReduc
 const FilmPreview = (props: FilmPreviewPropsType) => {
 
 
-    return <div className={style.filmPreview}
-                onClick={()=>props.viewFilmHandler(props.filmPreview.imdbID)}>
-        <div className={style.Title}>{props.filmPreview.Title}</div>
-        <img src={props.filmPreview.Poster} alt={"poster"}/>
-        <div className={style.Year}>Year: {props.filmPreview.Year}</div>
-        <div className={style.Type}>Type: {props.filmPreview.Type}</div>
+    return <div className={style.filmPreviewBlock}
+                onClick={() => props.viewFilmHandler(props.filmPreview.imdbID)}>
+
+        <div className={style.filmPreviewBlock__Title}>{props.filmPreview.Title}</div>
+
+        <img className={style.filmPreviewBlock__img} src={props.filmPreview.Poster} alt={"poster"}/>
+
+        <div>Year: {props.filmPreview.Year}</div>
+        <div>Type: {props.filmPreview.Type}</div>
+
     </div>
 }
 
 export type FilmPreviewPropsType = {
 
-    filmPreview : FilmPreviewType
+    filmPreview: FilmPreviewType
     viewFilmHandler: (imdbID: string) => void
 
 

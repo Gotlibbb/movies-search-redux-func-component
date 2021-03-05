@@ -1,22 +1,14 @@
 
-.filmPreview:hover {
-    background-color: #333333;
-
-}
-
-.filmPreview:active {
-    color: black;
-}
 
 
 @media screen and (min-width: 700px) {
-    .filmPreview img {
-        width: 100%;
+    .filmPreviewBlock__img {
+        width: 80%;
         padding-top: 5px;
 
     }
 
-    .filmPreview {
+    .filmPreviewBlock {
         width: 400px;
         padding-bottom: 25px;
         border-top: solid 5px #7780a0;
@@ -24,23 +16,24 @@
         text-align: center;
 
     }
-    .Title {
-         color: #d25555;
-         font-size: 35px;
-         padding: 15px 15px;
-         font-weight: bold;
-     }
+
+    .filmPreviewBlock__Title {
+        color: #d25555;
+        font-size: 30px;
+        padding: 15px 15px;
+        font-weight: bold;
+    }
 
 }
 
 @media screen and (max-width: 700px) {
-    .filmPreview img {
+    .filmPreviewBlock__img {
         width: 50%;
         padding-top: 5px;
 
     }
 
-    .filmPreview {
+    .filmPreviewBlock {
         padding-bottom: 25px;
         border-top: solid 5px #7780a0;
         width: 100%;
@@ -48,10 +41,22 @@
         text-align: center;
 
     }
-    .Title {
+
+    .filmPreviewBlock__Title {
         color: #d25555;
         font-size: 25px;
         padding: 15px 15px;
         font-weight: bold;
     }
 }
+.filmPreviewBlock:hover {
+    background-color: #4d606b;
+    cursor: pointer;
+
+}
+
+.filmPreviewBlock:active {
+    background-color: #20272f;
+    cursor: pointer;
+}
+
