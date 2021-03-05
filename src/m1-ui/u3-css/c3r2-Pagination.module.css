@@ -1,5 +1,5 @@
 
-.pagesBlock{
+.paginBlock{
     display: flex;
     flex-direction: row;
     font-size: 30px;
@@ -7,16 +7,16 @@
     justify-content: flex-start;
 
 }
-.pagesBlock span:hover{
+.paginBlock__span:hover{
     color: #d25555;
     font-weight: bold;
 }
-.pagesBlock span{
+.paginBlock__span{
     cursor: pointer;
     padding-right: 15px;
 }
 
-.pagesBlock .checked{
+.paginBlock__span__checked{
     color: #d25555;
     font-weight: bold;
     font-size: 31px;
@@ -29,7 +29,7 @@
 }
 
 @media screen and (min-width: 700px) {
-    .toggleBlock{
+    .compPaginBlock{
         padding: 50px 25px;
         width: 100%;
         height: 35px;
@@ -40,7 +40,7 @@
         justify-content: space-between;
 
     }
-    .pageToggle{
+    .compPaginBlock__toggleBlock{
         display: flex;
         flex-direction: row;
         padding-right: 80px;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 700px) {
-    .toggleBlock{
+    .compPaginBlock{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -56,7 +56,7 @@
         font-weight: bold;
         align-items: center;
     }
-    .pageToggle{
+    .compPaginBlock__toggleBlock{
         display: flex;
         flex-direction: row;
         margin-top: 15px;
@@ -66,7 +66,7 @@
 
 
 @media screen and (max-width: 280px) {
-    .toggleBlock{
+    .compPaginBlock{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -74,7 +74,7 @@
         font-weight: bold;
         align-items: center;
     }
-    .pageToggle{
+    .compPaginBlock__toggleBlock{
         display: flex;
         flex-direction: row;
         margin-top: 15px;
@@ -84,36 +84,35 @@
 
 
 
-.changePage input{
-    width: 50px;
-    font-size: 25px;
-}
-
-.pageToggle button{
+.compPaginBlock__toggleBlock__button{
     height: 100%;
     font-size: 25px;
 
 }
 
-
-.currentPage{
+.compPaginBlock__toggleBlock__currentPage{
     padding: 0 10px 0 10px;
     font-size: 40px;
     color: #d25555;
 }
 
-.totalPage{
+
+.compPaginBlock__totalPage{
     padding-right: 25px;
 }
 
-.changePage div{
-    padding-right: 10px;
-}
-.changePage{
+.compPaginBlock__changePageBlock{
     display: flex;
     padding-right: 10px;
 }
-.changePage button{
+.compPaginBlock__changePageBlock__span{
+    padding-right: 10px;
+}
+.compPaginBlock__changePageBlock__input{
+    width: 50px;
+    font-size: 25px;
+}
+.compPaginBlock__changePageBlock__button{
     font-size: 25px;
 
 }

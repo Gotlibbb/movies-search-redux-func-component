@@ -7,25 +7,29 @@ const Search = (props: SearchComponentPropsType) => {
 
     return <div className={style.searchContainer}>
 
-        <div className={style.logo}><h1>Movies_Search</h1></div>
+        <div className={style.searchContainer__logo}><h1>Movies_Search</h1></div>
 
-        <div className={style.searchingBlock}>
 
-            <div className={style.inputZone}>
+        <div className={style.searchContainer__inputZone}>
 
-                <input type={"text"}
-                       autoFocus={true}
-                       placeholder={"Enter name of movie "}
-                       value={inputValue}
-                       onChange={(e) => setInputValue(e.target.value)}
-                       onKeyPress={(e) => {
-                           e.key === "Enter" && props.searchHandler(inputValue)
-                       }}
-                />
+            <input type={"text"}
+                   className={style.searchContainer__inputZone__input}
+                   autoFocus={true}
+                   placeholder={"Enter name of movie "}
+                   value={inputValue}
+                   onChange={(e) => setInputValue(e.target.value)}
+                   onKeyPress={(e) => {
+                       e.key === "Enter" && props.searchHandler(inputValue)
+                   }}
+            />
 
-                <button onClick={() => props.searchHandler(inputValue)}>Search</button>
+            <input type={"submit"}
+                   className={style.searchContainer__inputZone__button}
+                    onClick={() => props.searchHandler(inputValue)}
+                   value={"Search"}
+            />
 
-            </div>
+
         </div>
     </div>
 }

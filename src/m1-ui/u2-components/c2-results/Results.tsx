@@ -23,7 +23,7 @@ const Results = (props: ResultsPropsType) => {
 
             />
             {props.preloader ? <Preloader/> :
-                <div className={style.resultsBlock}>
+                <div className={style.resultsContainer__resultsBlock}>
                     {props.searchResults.map((el) => {
                             let obj: FilmPreviewType = {
                                 imdbID: el.imdbID,

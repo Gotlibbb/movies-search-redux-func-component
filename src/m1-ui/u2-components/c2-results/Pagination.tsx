@@ -28,15 +28,19 @@ const Pagination = (props: PaginationPropsType) => {
         let pageHandler = props.currentPage
 
         return <div
-            className={style.toggleBlock}
+            className={style.compPaginBlock}
             style={props.onlySwitch ? {justifyContent: "center"} : {}}
         >
             <div
-                className={style.changePage}
+                className={style.compPaginBlock__changePageBlock}
                 hidden={props.onlySwitch}
             >
-                <div hidden={props.onlySwitch} >Change page:</div>
-                <input hidden={props.onlySwitch} type="number" value={inputPage}
+                <span className={style.compPaginBlock__changePageBlock__span}>
+                    Change page:
+                </span>
+                <input type="number"
+                       className={style.compPaginBlock__changePageBlock__input}
+                       value={inputPage}
                        onChange={(e) => {
                            setInputPage(e.currentTarget.value)
                        }}
@@ -52,10 +56,8 @@ const Pagination = (props: PaginationPropsType) => {
                        }}
                 />
 
-                <button hidden={props.onlySwitch}
-                        onClick={() => {
-                            // props.setCurrentPage(Number(inputPage))
-                            // props.searchingFilm(inputPage)
+                <button className={style.compPaginBlock__changePageBlock__button}
+                    onClick={() => {
                             pushUrl(inputPage)
                         }}
                         disabled={errorInput}
@@ -64,43 +66,48 @@ const Pagination = (props: PaginationPropsType) => {
             </div>
 
             <div
-                className={style.pageToggle}
-
+                className={style.compPaginBlock__toggleBlock}
             >
                 {props.currentPage !== 1 &&
-                <button onClick={() => {
+                <button className={style.compPaginBlock__toggleBlock__button}
+                    onClick={() => {
                     props.onlySwitch && window.scrollTo(0, 300)
-                    pushUrl(String(pageHandler-=1))
+                    pushUrl(String(pageHandler -= 1))
 
 
                 }}>⇐...prev </button>}
-                <div className={style.currentPage}> {props.currentPage} </div>
+                <div className={style.compPaginBlock__toggleBlock__currentPage}>
+                    {props.currentPage}
+                </div>
                 <button
+                    className={style.compPaginBlock__toggleBlock__button}
                     disabled={errorButton}
                     onClick={() => {
                         props.onlySwitch && window.scrollTo(0, 300)
-                        pushUrl(String(pageHandler+=1))
+                        pushUrl(String(pageHandler += 1))
 
 
                     }}> next...⇒
                 </button>
             </div>
 
-            <div
-                className={style.totalPage}
+            <span
+                className={style.compPaginBlock__totalPage}
                 hidden={props.onlySwitch}
-            >Total pages: {pages.length - 1}</div>
+            >Total pages: {pages.length - 1}</span>
         </div>
 
 
     }
 
 
-    return <div className={style.pagesBlock}>
+    return <div className={style.paginBlock}>
         {pages.map(p => {
-            return <span hidden={p === 0}
+            return <span hidden={p === 0 || pages.length === 2}
                          key={p}
-                         className={props.currentPage === p ? style.checked : " "}
+                         className={props.currentPage === p ?
+                             style.paginBlock__span__checked + " " + style.paginBlock__span :
+                             style.paginBlock__span}
                          onClick={
                              () => {
 
