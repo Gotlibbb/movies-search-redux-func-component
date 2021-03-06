@@ -23,87 +23,21 @@
 }
 /*//-----------------------------------------------------------------------*/
 
-.pageSwitch {
+
+.compPaginBlock{
+    display: flex;
+
+    font-weight: bold;
+}
+.compPaginBlock__toggleBlock{
     display: flex;
     flex-direction: row;
-}
-
-@media screen and (min-width: 700px) {
-    .compPaginBlock{
-        padding: 50px 25px;
-        width: 100%;
-        height: 35px;
-        display: flex;
-        flex-direction: row;
-        font-size: 30px;
-        font-weight: bold;
-        justify-content: space-between;
-
-    }
-    .compPaginBlock__toggleBlock{
-        display: flex;
-        flex-direction: row;
-        padding-right: 80px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .compPaginBlock{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        font-weight: bold;
-        align-items: center;
-    }
-    .compPaginBlock__toggleBlock{
-        display: flex;
-        flex-direction: row;
-        margin-top: 15px;
-    }
-}
-
-
-
-@media screen and (max-width: 280px) {
-    .compPaginBlock{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        font-weight: bold;
-        align-items: center;
-    }
-    .compPaginBlock__toggleBlock{
-        display: flex;
-        flex-direction: row;
-        margin-top: 15px;
-    }
-}
-
-
-
-
-.compPaginBlock__toggleBlock__button{
-    height: 100%;
-    font-size: 25px;
 
 }
 
-.compPaginBlock__toggleBlock__currentPage{
-    padding: 0 10px 0 10px;
-    font-size: 40px;
-    color: #d25555;
-}
-
-
-.compPaginBlock__totalPage{
-    padding-right: 25px;
-}
 
 .compPaginBlock__changePageBlock{
     display: flex;
-    padding-right: 10px;
 }
 .compPaginBlock__changePageBlock__span{
     padding-right: 10px;
@@ -116,3 +50,49 @@
     font-size: 25px;
 
 }
+
+@media screen and (min-width: 700px) {
+    .compPaginBlock{
+        margin: 50px 25px;
+        height: 35px;
+        flex-direction: row;
+        font-size: 30px;
+        justify-content: space-around;
+        width: 100%;
+
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .compPaginBlock{
+        flex-direction: column;
+        font-size: 20px;
+        align-items: center;
+    }
+    .compPaginBlock__toggleBlock{
+        margin-top: 15px;
+    }
+}
+
+
+
+
+.compPaginBlock__toggleBlock__button{
+    height: 100%;
+    font-size: 25px;
+}
+
+.compPaginBlock__toggleBlock__currentPage{
+    text-align: center;
+    width: 80px;
+    font-size: 40px;
+    color: #d25555;
+}
+
+.compPaginBlock__totalPage{
+    padding-right: 65px;
+}
+
+

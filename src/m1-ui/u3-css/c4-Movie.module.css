@@ -1,26 +1,37 @@
 .moviePageContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
+
 .moviePageContainer__movieBlock {
     display: flex;
     padding-top: 40px;
+
 }
+
 .moviePageContainer__title {
     text-align: center;
     color: #d05858;
     font-weight: 1000;
 
 }
+
 .moviePageContainer__backToSearch {
     color: #d25555;
     text-decoration: none;
 
 }
 
-.moviePageContainer__movieBlock__img {}
-.moviePageContainer__movieBlock__movieInfo {}
+.moviePageContainer__movieBlock__img {
+    width: 100%;
+}
+
+.moviePageContainer__movieBlock__movieInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
 
 @media screen and (min-width: 700px) {
 
@@ -44,19 +55,12 @@
     }
 
     .moviePageContainer__movieBlock__img {
-        width: 100%;
         min-width: 400px;
         max-width: 500px;
-
     }
 
     .moviePageContainer__movieBlock__movieInfo {
         padding-left: 25px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: normal;
-
     }
 
 }
@@ -64,12 +68,8 @@
 @media screen and (max-width: 700px) {
 
     .moviePageContainer__movieBlock {
-
         flex-direction: column;
         align-items: center;
-
-
-
     }
 
     .moviePageContainer__title {
@@ -79,54 +79,18 @@
 
 
     .moviePageContainer__backToSearch {
-
         font-size: 20px;
         margin-top: 25px;
-
     }
 
     .moviePageContainer__movieBlock__img {
-
-        width: 100%;
         padding-bottom: 15px;
 
     }
 
     .moviePageContainer__movieBlock__movieInfo {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
         font-size: 20px;
-
     }
-}
-
-@media screen and (max-width: 280px) {
-
-
-    .moviePageContainer__movieBlock {
-
-        display: flex;
-        flex-direction: column;
-
-
-    }
-
-    .moviePageContainer__movieBlock__img {
-        width: 100%;
-
-
-    }
-
-    .moviePageContainer__movieBlock__movieInfo {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: normal;
-        font-size: 20px;
-
-    }
-
 }
 
 

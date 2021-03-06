@@ -9,7 +9,7 @@ const FilmPreview = (props: FilmPreviewPropsType) => {
     return <div className={style.filmPreviewBlock}
                 onClick={() => props.viewFilmHandler(props.filmPreview.imdbID)}>
 
-        <div className={style.filmPreviewBlock__Title}>{props.filmPreview.Title}</div>
+        <div className={style.filmPreviewBlock__title}>{props.filmPreview.Title}</div>
 
         <img className={style.filmPreviewBlock__img} src={props.filmPreview.Poster} alt={"poster"}/>
 

@@ -3,29 +3,31 @@
   flex-direction: column;
 
 }
+.searchContainer__logo {
+  color: white;
+  text-align: center;
+}
+.searchContainer__inputZone {
+  display: flex;
+  text-decoration: none;
+  margin-top: 50px;
+  width: 100%;
+}
 
 
 @media screen and (min-width: 700px) {
 
   .searchContainer__logo {
     font-size: 50px;
-    color: white;
-
   }
 
   .searchContainer__inputZone{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
     flex-direction: row;
-    text-decoration: none;
-    width: 100%;
+    justify-content: center;
   }
-
   .searchContainer__inputZone__input {
     margin-right: 10px;
     font-size: 35px;
-
   }
   .searchContainer__inputZone__button {
     font-size: 35px;
@@ -35,24 +37,19 @@
 
 
 @media screen and (max-width: 700px) {
+
   .searchContainer__logo{
     font-size: 25px;
-    color: white;
   }
   .searchContainer__inputZone{
-    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    text-decoration: none;
-    width: 100%;
   }
   .searchContainer__inputZone__input {
     width: 320px;
     margin-bottom: 10px;
     margin-right: 0;
     font-size: 30px;
-
   }
   .searchContainer__inputZone__button {
     font-size: 30px;
@@ -65,22 +62,10 @@
 @media screen and (max-width: 280px) {
   .searchContainer__logo{
     font-size: 19px;
-    color: white;
-    text-align: center;
-  }
-  .searchContainer__inputZone{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    text-decoration: none;
-    width: 100%;
   }
   .searchContainer__inputZone__input {
     width: 268px;
-    margin-bottom: 10px;
     font-size: 23px;
-
   }
   .searchContainer__inputZone__button {
     font-size: 25px;

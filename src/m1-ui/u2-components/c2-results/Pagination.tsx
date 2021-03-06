@@ -35,10 +35,12 @@ const Pagination = (props: PaginationPropsType) => {
                 className={style.compPaginBlock__changePageBlock}
                 hidden={props.onlySwitch}
             >
-                <span className={style.compPaginBlock__changePageBlock__span}>
+                <span className={style.compPaginBlock__changePageBlock__span}
+                      hidden={props.onlySwitch}>
                     Change page:
                 </span>
                 <input type="number"
+                       hidden={props.onlySwitch}
                        className={style.compPaginBlock__changePageBlock__input}
                        value={inputPage}
                        onChange={(e) => {
@@ -57,7 +59,8 @@ const Pagination = (props: PaginationPropsType) => {
                 />
 
                 <button className={style.compPaginBlock__changePageBlock__button}
-                    onClick={() => {
+                        hidden={props.onlySwitch}
+                        onClick={() => {
                             pushUrl(inputPage)
                         }}
                         disabled={errorInput}
@@ -68,14 +71,15 @@ const Pagination = (props: PaginationPropsType) => {
             <div
                 className={style.compPaginBlock__toggleBlock}
             >
-                {props.currentPage !== 1 &&
+
                 <button className={style.compPaginBlock__toggleBlock__button}
-                    onClick={() => {
-                    props.onlySwitch && window.scrollTo(0, 300)
-                    pushUrl(String(pageHandler -= 1))
+                        disabled={props.currentPage === 1}
+                        onClick={() => {
+                            props.onlySwitch && window.scrollTo(0, 300)
+                            pushUrl(String(pageHandler -= 1))
 
 
-                }}>⇐...prev </button>}
+                        }}>⇐...prev </button>
                 <div className={style.compPaginBlock__toggleBlock__currentPage}>
                     {props.currentPage}
                 </div>
