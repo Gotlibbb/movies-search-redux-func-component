@@ -6,7 +6,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../../m2-bll/reduxStore";
 import {getMovie, MovieType} from "../../../m2-bll/b1-reducers/r2-movieReducer";
 import {setFilmName} from "../../../m2-bll/b1-reducers/r1-searchResultsReducer";
-
 const MovieContainer = () => {
 
     const url: { movieId: string, filmNameUrl: string } = useParams()

@@ -8,6 +8,8 @@ import FilmPreview from "./FilmPreview";
 
 const Results = (props: ResultsPropsType) => {
 
+
+
     if (props.error) {
         return <span style={{color: "red"}}>{props.error}</span>
     }
